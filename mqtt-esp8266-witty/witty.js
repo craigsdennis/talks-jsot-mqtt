@@ -15,8 +15,8 @@ export function setLED(hex) {
     let result = hexToRgb(hex);
     console.log("Setting led to", hex, result);
     digitalWrite(PIN_LED_R, result.R);
-    digitalWrite(PIN_LED_G, result.B);
-    digitalWrite(PIN_LED_B, result.V);
+    digitalWrite(PIN_LED_G, result.G);
+    digitalWrite(PIN_LED_B, result.B);
 }
 
 export function onButtonPress(handler) {
