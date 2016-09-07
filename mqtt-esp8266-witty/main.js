@@ -7,9 +7,15 @@ import {setLED, getPhotoResistance, onButtonPress} from './witty';
 let wifi = require("Wifi");
 let mqtt = require("MQTT").create(config.mqttServer);
 
+setLED('fff');
+
 wifi.connect(config.ssid, {password: config.password}, err => {
-    if (err) throw err;
-    console.log("Wifi connected");
+    if (err) {
+        setLED("f00");
+        throw err;
+    }
+    console.log('Wifi connected');
+    setLED("0f0");
     mqtt.connect();
 });
 
