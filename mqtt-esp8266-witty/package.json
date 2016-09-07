@@ -1,0 +1,16 @@
+{
+  "name": "mqtt-talk",
+  "version": "0.0.0",
+  "private": true,
+  "main": "main.js",
+  "scripts": {
+    "push": "node ./scripts/push"
+  },
+  "devDependencies": {
+    "thingssdk-deployer": "github:thingssdk/thingssdk-deployer",
+    "thingssdk-espruino-strategy": "github:thingssdk/thingssdk-espruino-strategy"
+  },
+  "engines": {
+    "espruino": "1.86"
+  }
+}
